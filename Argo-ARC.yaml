@@ -12,5 +12,5 @@ spec:
   project: default
   source:
     path: apps
-    repoURL: https://github.com/casanova-21/Argo-ARC/apps
+    repoURL: https://github.com/casanova-21/Argo-ARC.git
     targetRevision: HEAD
