@@ -1,0 +1,9 @@
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com/casanova-21/Argo-ARC
+    targetRevision: HEAD
+    cm-repoURL: https://charts.jetstack.io
+    cm-chart: cert-manager
+    cm-targetRevision: 1.6.1
