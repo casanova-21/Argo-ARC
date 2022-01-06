@@ -4,6 +4,6 @@ spec:
   source:
     repoURL: https://github.com/casanova-21/Argo-ARC
     targetRevision: HEAD
-    cm-repoURL: https://charts.jetstack.io
-    cm-chart: cert-manager
-    cm-targetRevision: 1.6.1
+    cmrepoURL: https://charts.jetstack.io
+    cmchart: cert-manager
+    cmtargetRevision: 1.6.1

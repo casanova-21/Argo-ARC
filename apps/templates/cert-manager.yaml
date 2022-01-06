@@ -11,6 +11,6 @@ spec:
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    repoURL: {{ .Values.spec.source.cm-repoURL }}
-    chart: {{ .Values.spec.source.cm-chart }}
-    targetRevision: {{ .Values.spec.source.cm-targetRevision }}
+    repoURL: {{ .Values.spec.source.cmrepoURL }}
+    chart: {{ .Values.spec.source.cmchart }}
+    targetRevision: {{ .Values.spec.source.cmtargetRevision }}
