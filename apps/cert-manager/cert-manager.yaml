@@ -10,7 +10,7 @@ spec:
     namespace: cert-manager
   project: default
   source:
-    path: cert-manager
+#    path: cert-manager
     repoURL: https://charts.jetstack.io
     chart: cert-manager
     targetRevision: HEAD
