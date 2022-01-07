@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: actions-runner-controller
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+spec:
+  destination:
+    namespace: actions-runner-system
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    repoURL: https://actions-runner-controller.github.io/actions-runner-controller
+    chart: actions-runner-controller
+    targetRevision: 0.15.0
+    helm:
+      values: |
+        env:
+          SSL_CERT_DIR: "/etc/ssl/certs"
+        githubWebhookServer:
+          enabled: true
+        secret:
+          create: true
+          name: "github-webhook-server"
+          github_webhook_secret_token: "1234567890"
+        service:
+          type: LoadBalancer
+          ports:
+            - port: 80
+              targetPort: http
+              protocol: TCP
+              name: http
