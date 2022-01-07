@@ -14,3 +14,7 @@ spec:
     repoURL: https://charts.jetstack.io
     chart: cert-manager
     targetRevision: 1.6.1
+    helm:
+      values:
+        argo-cd:
+          installCRDs: false
