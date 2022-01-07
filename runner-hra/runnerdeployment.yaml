@@ -1,0 +1,21 @@
+apiVersion: actions.summerwind.dev/v1alpha1
+kind: RunnerDeployment
+metadata:
+  name: k8s-runner-deployment
+spec:
+  template:
+    spec:
+#      organization: harkonnens
+      organization: customer-success-architects
+      env: []
+#      ephemeral: false
+      labels:
+      - k8s-arc-runner
+#      volumes:
+#        - name: ghe-cert
+#          secret:
+#            secretName: ghecert
+#      volumeMounts:
+#        - mountPath: /etc/ssl/certs
+#          name: ghe-cert
+#          readOnly: true
