@@ -6,7 +6,7 @@ spec:
 #  scaleDownDelaySecondsAfterScaleOut: 60
   scaleTargetRef:
     name: k8s-runner-deployment
-  minReplicas: 1
+  minReplicas: 4
   maxReplicas: 5
   scaleUpTriggers:
   - githubEvent: {}
