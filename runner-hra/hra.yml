@@ -3,7 +3,7 @@ kind: HorizontalRunnerAutoscaler
 metadata:
    name: hra-csa
 spec:
-#  scaleDownDelaySecondsAfterScaleOut: 60
+  scaleDownDelaySecondsAfterScaleOut: 60
   scaleTargetRef:
     name: k8s-runner-deployment
   minReplicas: 4
