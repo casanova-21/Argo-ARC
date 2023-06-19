@@ -16,7 +16,7 @@ spec:
     targetRevision: 0.4.0
     helm:
       valueFiles:
-      - $values/values/values.yaml
+      - $values/values/values-dependabot-ghec.yaml
   - repoURL: 'https://github.com/casanova-21/Argo-ARC'
     ref: values
   syncPolicy:

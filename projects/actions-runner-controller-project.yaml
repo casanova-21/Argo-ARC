@@ -6,9 +6,13 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
   destinations:
   - name: in-cluster
     namespace: '*'
     server: https://kubernetes.default.svc
   sourceRepos:
-  - ghcr.io/actions/actions-runner-controller-chart
+  - 'ghcr.io/actions/actions-runner-controller-charts'
+  - 'https://github.com/casanova-21/Argo-ARC'
