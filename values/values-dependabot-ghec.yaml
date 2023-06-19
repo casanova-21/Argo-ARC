@@ -170,4 +170,4 @@ template:
 ## Note: if your controller is installed to only watch a single namespace, you have to pass these values explicitly.
 controllerServiceAccount:
   namespace: arc-systems
-  name: test-arc-gha-runner-scale-set-controller
+  name: arc-gha-runner-scale-set-controller
