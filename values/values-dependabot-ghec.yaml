@@ -13,7 +13,6 @@ githubConfigUrl: "https://github.com/casanova-21-test-org"
 
   ### GitHub PAT Configuration
 #  github_token: "token goes here"
-#  github_token: "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"
 ## If you have a pre-define Kubernetes secret in the same namespace the gha-runner-scale-set is going to deploy,
 ## you can also reference it via `githubConfigSecret: pre-defined-secret`.
 ## You need to make sure your predefined secret has all the required secret data set properly.
