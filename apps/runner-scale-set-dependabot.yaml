@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: arc-runner-scale-set-dependabot
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+spec:
+  destination:
+    namespace: arc-runners
+    server: https://kubernetes.default.svc
+  project: actions-runner-controller
+  sources:
+  - repoURL: 'ghcr.io/actions/actions-runner-controller-charts'
+    chart: gha-runner-scale-set
+    targetRevision: 0.4.0
+    helm:
+      valueFiles:
+      - $values/values/values-dependabot-ghec.yaml
+  - repoURL: 'https://github.com/casanova-21/Argo-ARC'
+    ref: values
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
